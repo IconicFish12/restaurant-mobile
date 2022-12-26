@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vanushki_restaurant/core/core.dart';
@@ -8,13 +9,13 @@ import 'package:vanushki_restaurant/views/page/menu.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => HomePage(),
         '/login': (context) => LoginPage(),
         '/register': (context) => RegisterPage(),
-        '/menu' :(context) => MenuPage()
+        '/menu': (context) => MenuPage()
       },
     );
   }
@@ -53,6 +54,7 @@ class _StarterState extends State<Starter> {
     return Scaffold(
         backgroundColor: primaryColor,
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
@@ -62,16 +64,6 @@ class _StarterState extends State<Starter> {
                   image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage('asset/image/Vanushki (2).png'))),
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Text("Vanushki Mobile",
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 24.7,
-                          color: Colors.white,
-                          wordSpacing: 2.5))),
             ),
           ],
         ));

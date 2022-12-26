@@ -41,6 +41,8 @@ dependencies:
   firebase_auth: ^4.2.2
   phosphor_flutter: ^1.4.0
   google_sign_in: ^5.4.2
+  image_picker: ^0.8.6
+  dio: ^4.0.6
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,8 @@ flutter:
   assets:
   - asset/image/Vanushki.png
   - asset/image/Vanushki (2).png
+  - asset/image/profile_picture.png
+  - asset/image/pic-remove.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
