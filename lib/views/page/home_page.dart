@@ -37,78 +37,7 @@ class _HomePageState extends State<HomePage> {
               );
             },
           )),
-      drawer: Drawer(
-        elevation: 0,
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              padding: EdgeInsets.symmetric(vertical: 20),
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                width: 150,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('asset/image/pic-remove'))),
-              ),
-            ),
-            ListTile(
-              leading: Icon(
-                PhosphorIcons.userCircleBold,
-                color: Colors.black,
-              ),
-              title: Text(
-                'My Profile',
-                style: GoogleFonts.poppins(
-                    textStyle:
-                        TextStyle(fontSize: 16.7, fontWeight: FontWeight.w600)),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                PhosphorIcons.clipboardTextBold,
-                color: Colors.black,
-              ),
-              title: Text(
-                'My Order',
-                style: GoogleFonts.poppins(
-                    textStyle:
-                        TextStyle(fontSize: 16.7, fontWeight: FontWeight.w600)),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: Icon(
-                PhosphorIcons.gearBold,
-                color: Colors.black,
-              ),
-              title: Text(
-                'Setting',
-                style: GoogleFonts.poppins(
-                    textStyle:
-                        TextStyle(fontSize: 16.7, fontWeight: FontWeight.w600)),
-              ),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
-      ),
+      drawer: appDrawer(context),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

@@ -63,7 +63,7 @@ class _StarterState extends State<Starter> {
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('asset/image/Vanushki (2).png'))),
+                      image: AssetImage('asset/image/vanushki-logo.png'))),
             ),
           ],
         ));

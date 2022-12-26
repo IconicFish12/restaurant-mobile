@@ -67,10 +67,10 @@ flutter:
   uses-material-design: true
 
   assets:
-  - asset/image/Vanushki.png
-  - asset/image/Vanushki (2).png
-  - asset/image/profile_picture.png
+  - asset/image/vanushki-logo.png
   - asset/image/pic-remove.png
+  - asset/image/picture.png
+  - asset/image/profilepicture.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
